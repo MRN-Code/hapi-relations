@@ -1,5 +1,5 @@
 {
-  "name": "hapi-relations",
+  "name": "hapi_relations",
   "version": "0.1.0",
   "description": "a relations plugin for hapi",
   "main": "index.js",
