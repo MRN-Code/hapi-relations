@@ -1,13 +1,14 @@
 {
-  "name": "hapi-relations",
-  "version": "0.0.0",
-  "description": "a relation plugin for hapi",
+  "name": "hapiRelations",
+  "version": "0.1.0",
+  "description": "a relations plugin for hapi",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
   "dependencies": {
-    "config": "1.13.0"
+    "config": "1.13.0",
+    "relations": "0.5.0"
   },
   "devDependencies": {
     "grunt": "0.4.5",
