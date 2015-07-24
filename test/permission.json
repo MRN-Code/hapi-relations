@@ -1,6 +1,8 @@
 {
-    "_comment": "This is the test permission template",
-    "TEST": {
-        "EXAMPLE": ["GET","POST","PUT","DELETE"]
+    "userAccounts": {
+        "admin": ["get","post","put","delete"]
+    },
+    "invetory": {
+        "user": ["get"]
     }
 }
