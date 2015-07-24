@@ -1,0 +1,6 @@
+{
+    "_comment": "This is the test permission template",
+    "TEST": {
+        "EXAMPLE": ["GET","POST","PUT","DELETE"]
+    }
+}
