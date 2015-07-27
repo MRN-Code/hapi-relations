@@ -19,7 +19,7 @@ describe('relations plugin', function () {
       }
     ], function (err) {
       expect(err).to.be.undefined;
-      expect(server.plugins.hapiRelations).to.be.a('object');
+      expect(server.plugins.relations).to.be.a('object');
     });
   });
 });
