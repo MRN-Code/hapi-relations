@@ -28,12 +28,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/MRN-Code/hapi-relations.git"
+    "url": "git+https://github.com/MRN-Code/hapi-relations.git"
   },
-  "author": "",
+  "author": "Ross Kelly <rkelly@mrn.org> (mrn.org)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/MRN-Code/hapi-relations/issues"
   },
-  "homepage": "https://github.com/MRN-Code/hapi-relations"
+  "homepage": "https://github.com/MRN-Code/hapi-relations",
+  "keywords": [
+    "hapi",
+    "relations"
+  ]
 }

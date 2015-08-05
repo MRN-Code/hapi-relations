@@ -26,7 +26,24 @@ server.register([
     register: require('hapi-relations'),
     options: {
         schema: schema,
-        client: redis
+        client: redis,
+        clientType: 'redis'
+    }
+  }
+], function (err) {
+    console.log(err);
+});
+```
+Or optionally pass the client in as a server plugin
+```js
+server.register([
+  {
+    register: require('hapi-relations'),
+    options: {
+        schema: schema,
+        client: 'hapi-redis',
+        clientType: 'redis',
+        pluginClient: true
     }
   }
 ], function (err) {

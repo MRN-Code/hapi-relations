@@ -4,6 +4,11 @@ var expect = chai.expect;
 var Hapi = require('hapi');
 var redis = require('redis');
 var client = redis.createClient(6379, 'localhost');
+var fs = require('fs');
+
+var schema = JSON.parse(
+    fs.readFileSync('./test/permission.json', 'utf8')
+);
 
 describe('relations plugin', function () {
   it('should load relations plugin', function () {
@@ -13,8 +18,9 @@ describe('relations plugin', function () {
       {
         register: require('../index.js'),
         options: {
-            template: './test/permission.json',
-            client: client
+            schema: schema,
+            client: client,
+            clientType: 'redis'
         }
       }
     ], function (err) {
