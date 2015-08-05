@@ -12,15 +12,20 @@ Pass in your relations schema and choosen client as options.
 ```js
 var Hapi = require('hapi');
 var redis = require('redis');
+var fs = require('fs');
 
 var client = redis.createClient(6379, 'localhost');
 var server = new Hapi.Server();
+
+var schema = JSON.parse(
+    fs.readFileSync('schema.json', 'utf8')
+);
 
 server.register([
   {
     register: require('hapi-relations'),
     options: {
-        template: './schema.json',
+        schema: schema,
         client: redis
     }
   }
@@ -33,7 +38,7 @@ And access realtions from the plugins
 server.plugins.relations.coins('Can TEST GET from EXAMPLE);
 ```
 # Configuration
-The `template` contains a listing of contexts, which will be added to relations. A context defines an application in which the user's privileges will be evaulated. For instance, if the context is `inventory`, then the roles and actions listed within the context correspond to a user's ability to use or add to `inventory`.
+The `schema` expects a loaded schema file, which will be added to relations. A context defines an application in which the user's privileges will be evaulated. For instance, if the context is `inventory`, then the roles and actions listed within the context correspond to a user's ability to use or add to `inventory`.
 
 The context consists of roles, and which actions they are allowed to perform. Please see the `test/permission.json` for an example.
 
