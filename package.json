@@ -1,6 +1,6 @@
 {
   "name": "hapi-relations",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a relations plugin for hapi",
   "main": "index.js",
   "directories": {
